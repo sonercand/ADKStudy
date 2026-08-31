@@ -23,12 +23,21 @@ if credentials_path:
 def summation(numbers: list[float]) -> float:
     """Sums a list of numbers."""
     return sum(numbers)
+def division(x:float,y:float) -> float:
+    """Divide x by y"""
+    return x/y
+def substract(x:float,y:float)->float:
+    """Substracts y from x"""
+    return x-y
+def multiply(x:float,y:float)->float:
+    """multiply x and y"""
+    return x*y
 
 # The console runner looks for this Agent instance
 root_agent = Agent(
     name="calculator_tools",
     description="Multiple tools to do different mathematical calculations",
     model="gemini-2.5-flash",
-    tools=[summation],
+    tools=[summation,division,substract,multiply],
     instruction="You are a calculator and calculate arithmetic."
 )
