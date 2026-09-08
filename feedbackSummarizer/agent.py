@@ -13,7 +13,7 @@ project_id = os.getenv("PROJECT_ID")
 location = os.getenv("LOCATION")
 model = os.getenv("model")
 credentials_path = os.getenv("GOOGLE_APPLICATION_CREDENTIALS")
-script_dir = os.path.dirname(os.path.abspath(__file__))
+
 
 
 FeedbackType = Literal["complaint", "suggestion", "praise"]
